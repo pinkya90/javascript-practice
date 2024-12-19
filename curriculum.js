@@ -270,3 +270,45 @@ console.log("ArG :", arg)
 }
 arrowFunction("hello")
 
+//try catch 
+
+try{
+    //throw "not a string"
+    // a=10+2
+    // throw TypeError()
+    throw TypeError("this message will be printed")
+}
+
+catch(e){
+    if(e instanceof TypeError){
+        console.log(e.message)
+        // console.log("already declared cannot use")
+    }
+// console.log(e)
+}
+finally{
+    console.log("there was no exception")
+}
+
+//higher order functions
+//function calling new function ( callback function)
+
+const p= [1,2,3,4]
+const p1 =[]
+for(i of p ){
+p1.push(i*2)
+}
+console.log(p1)
+
+// callback with a function
+
+function mulBy(arg){
+return arg*2
+}
+const p2=p.map(mulBy)
+console.log(p2)
+
+//callback with a arrow function
+const p3=p.map((arg2)=>arg2*2)
+console.log(p3)
+
