@@ -312,3 +312,48 @@ console.log(p2)
 const p3=p.map((arg2)=>arg2*2)
 console.log(p3)
 
+// filter 
+
+const students = [
+    { name: 'Quincy', grade: 96 },
+    { name: 'Jason', grade: 84 },
+    { name: 'Alexis', grade: 100 },
+    { name: 'Sam', grade: 65 },
+    { name: 'Katie', grade: 90 }
+  ];
+
+  const studentGrade= students.filter(student=>student.grade>=90)
+  console.log(studentGrade)
+
+  //reduce
+  const numbers=[1,2,3,4]
+  const add=numbers.reduce(function(result , item){
+    return result+item
+  },0)
+  console.log(add)
+
+  function add2(result, item){
+    return result+ item
+
+  }
+  const add3=numbers.reduce(add2,10)
+  console.log(add3)
+
+  const add4=numbers.reduce((result,item)=> result+ item,0)
+  console.log(add4)
+
+  //flat 
+  
+b2=[1,2,3,[4,5],6]
+c1=[1,2,[3,[4,5]],6]
+res1=b2.flat()
+console.log(res1)
+res2=c1.flat(2)
+console.log(res2)
+
+//flatmap
+
+const arr =[1,2,1]
+const result = arr.flatMap((num)=>(num === 2) ? [2,2]:1)
+console.log(result)
+
